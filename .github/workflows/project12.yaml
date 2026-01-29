@@ -50,15 +50,11 @@ jobs:
 
         run: terraform fmt -recursive
 
-        working-directory: terraform
-
 
 
       - name: Terraform init
 
         run: terraform init -input=false
-
-        working-directory: terraform
 
 
 
@@ -66,14 +62,10 @@ jobs:
 
         run: terraform validate -no-color
 
-        working-directory: terraform
-
 
 
       - name: Terraform Plan
 
         run: terraform plan -out=tfplan -no-color -input=false
-
-        working-directory: terraform
 
       
